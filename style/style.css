@@ -3,6 +3,21 @@
   transform-origin: center center;
 }
 
+.rotate-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotate-overlay img {
+  max-width: 80%;
+  height: auto;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -210,6 +225,13 @@ body {
     width: 100%;
   }
 
+  .rotate-overlay {
+    display: flex;
+  }
+  .orientation-wrapper {
+    display: none;
+  }
+
   .orientation-wrapper {
     position: absolute;
     top: 0;
@@ -224,5 +246,33 @@ body {
   section {
     width: 100vh;
     height: 100vw;
+  }
+
+  @keyframes fadeInTiltOut {
+    0% {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+    20% {
+      opacity: 1;
+      transform: rotate(0deg);
+    }
+    60% {
+      opacity: 1;
+      transform: rotate(-90deg); /* Tilt left */
+    }
+    80% {
+      opacity: 1;
+      transform: rotate(-90deg);
+    }
+    100% {
+      opacity: 0;
+      transform: rotate(0deg);
+    }
+  }
+
+  .rotate-overlay img {
+    opacity: 0;
+    animation: fadeInTiltOut 3s ease-in-out forwards;
   }
 }
