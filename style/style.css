@@ -148,14 +148,6 @@ body {
   height: 20%;
 }
 
-.six .hat {
-  position: absolute;
-  width: clamp(4vh, 2vw, 4vh);
-  top: 12%;
-  left: 50.5%;
-  transform: translateX(-50%);
-}
-
 .baloons img {
   display: inline-block;
   position: absolute;
@@ -246,14 +238,6 @@ body {
   section {
     width: 100vh;
     height: 100vw;
-  }
-
-  .six .hat {
-    position: absolute;
-    width: clamp(2vh, 1vw, 1vh);
-    top: 11%;
-    left: 51%;
-    transform: translateX(-50%);
   }
 
   @keyframes fadeInTiltOut {

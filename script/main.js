@@ -114,9 +114,6 @@ const animationTimeline = () => {
     .from(".lydia-dp", 0.5, {
       scale: 3.5, opacity: 0, x: 25, y: -25, rotationZ: -45
     }, "-=2")
-    .from(".hat", 0.5, {
-      x: -100, y: 350, rotation: -180, opacity: 0
-    })
     .staggerFrom(".wish-hbd span", 0.7, {
       opacity: 0, y: -50, rotation: 150, skewX: "30deg", ease: Elastic.easeOut.config(1, 0.5)
     }, 0.1)
